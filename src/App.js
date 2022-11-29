@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {AppContext} from "./state/context";
+import {appReducer} from "./state/reducer";
+import {initialAppState} from "./state/state";
+import {useEffect, useReducer} from "react";
+import {Link, Route, BrowserRouter, Routes} from "react-router-dom";
+import ProjectsPage from "./components/Projects/ProjectsPage";
+import TasksPage from "./components/Tasks/TasksPage";
+import './styles/styles.scss'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [state, dispatch] = useReducer(appReducer, initialAppState);
+
+    return (
+        <AppContext.Provider value={{state, dispatch}}>
+            <div className="App">
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<ProjectsPage/>}/>
+                        <Route path="/projects">
+                            <Route path=":id" element={<TasksPage zxc={1}/>}/>
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
+            </div>
+        </AppContext.Provider>
+    );
 }
 
 export default App;

@@ -1,0 +1,54 @@
+@import 'colors';
+
+/* The Modal (background) */
+.wrapper {
+  position: relative;
+}
+.modal {
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  z-index: 2;
+
+  .global{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(1,1,1,0.3);
+    z-index: 3;
+  }
+
+
+  .modal-content__wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+
+    .modal-content {
+      background-color: #ffffff;
+      margin: auto;
+      padding: 20px;
+      width: 80%;
+      z-index: 4;
+
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+
+        &:hover {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

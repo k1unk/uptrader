@@ -1,0 +1,129 @@
+@import 'colors';
+
+.projects-page {
+  .projects-wrapper {
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .create-button {
+      cursor: pointer;
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #adbeff;
+
+      &:hover {
+        background-color: #7693ff;
+      }
+    }
+
+    .no-projects {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      flex-grow: 1;
+      background-color: #c4d0ff;
+    }
+
+    .projects {
+      margin-top: 15px;
+      .project {
+        border: 1px solid black;
+        margin-bottom: 3px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        min-height: 31px;
+        position: relative;
+
+        &_selected {
+          border: 3px solid black
+        }
+
+        .name {
+          font-size: 18px;
+        }
+
+        .icons {
+          display: flex;
+
+          .rename {
+            svg {
+              width: 15px;
+              height: 15px;
+              color: #a6a6a6;
+              cursor: pointer;
+
+              &:hover {
+                color: #000000;
+              }
+            }
+          }
+
+          .delete {
+            svg {
+              width: 15px;
+              height: 15px;
+              color: #a6a6a6;
+              cursor: pointer;
+
+              &:hover {
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-modal {
+  display: flex;
+  align-items: center;
+
+  form {
+    margin-right: 20px;
+  }
+
+  .colorSelect {
+    display: flex;
+    margin-right: 20px;
+
+    .text {
+      margin-right: 10px;
+    }
+
+    .color {
+      width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      cursor: pointer;
+      margin-right: 3px;
+
+      &_selected {
+        border: 3px solid black;
+        background-color: #ffb8de;
+      }
+    }
+  }
+
+  .modal__button {
+    background-color: #9ba8ec;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 18px;
+    cursor: pointer;
+  }
+
+
+}

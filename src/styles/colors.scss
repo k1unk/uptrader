@@ -1,0 +1,35 @@
+:root {
+  --backgroundColor: #ffffff;
+  --headerColor: #242526;
+  --fontColor: #000000;
+  --fontColor2: #09d3ac;
+  --fontColorInverted: #ffffff;
+  --fontColorPlaceholder: #595959;
+  --boardColor: #e8e8e8;
+  --boardNewTaskColor: #ffffff;
+  --taskColor: #ffffff;
+  --taskColorHover: #f0f4ff;
+  --taskCompletedFontColor: #d1d1d1;
+
+--menuHoverBackground: #e1e1e1;
+  --menuOptions: #2c2c2c;
+}
+
+[data-theme="dark"] {
+  --backgroundColor: #18191a;
+  --headerColor: #242526;
+  --fontColor: #f5f6f7;
+  --fontColor2: #09d3ac;
+  --fontColorPlaceholder: #c4c4c4;
+  --scrollerColor1: #686868;
+  --scrollerColor2: #444444;
+  --boardColor: #333333;
+  --taskColor: #111111;
+  --taskColorHover: #2d2d2d;
+  --taskCompletedFontColor: #0a0a0a;
+  --boardNewTaskColor: #464646;
+  --fontColorInverted: #000000;
+
+  --menuHoverBackground: #2c2c2c;
+  --menuOptions: #8a8a8a;
+}

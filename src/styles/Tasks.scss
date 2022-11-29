@@ -1,0 +1,180 @@
+@import 'colors';
+
+.tasks-page {
+  margin: auto;
+
+  .header {
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    .project {
+      color: black;
+      padding: 5px 15px;
+      background-color: #9ba8ec;
+      text-decoration: none;
+      margin-right: 40px;
+      cursor: pointer;
+    }
+
+    .search {
+      display: flex;
+
+      .btn {
+        padding: 5px 15px;
+        background-color: #9ba8ec;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .column {
+      border: 1px solid black;
+      width: 30%;
+      @media screen and (max-width: 768px) {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+
+      }
+
+      .column__title {
+        border-radius: 4px;
+        background-color: #bdece3;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .create-task {
+        border-radius: 4px;
+        background-color: #d6e5c3;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .uncompleted {
+
+      }
+
+      .completed {
+        .completed__title {
+
+        }
+
+
+      }
+
+    }
+  }
+}
+
+
+.task {
+  margin-top: 5px;
+  background-color: #f1eded;
+
+  &_completed {
+    color: #9f9f9f
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+
+    .main-left {
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: 10px
+      }
+
+      .priority {
+        margin-right: 15px;
+        height: 14px;
+        width: 14px;
+      }
+
+      .task-number {
+        margin-right: 15px;
+        font-size: 16px;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 50%;
+
+      }
+
+
+      .task-title {
+
+      }
+    }
+
+
+    .arrow {
+
+      .buttonArrow {
+        border: solid var(--fontColor);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        transition: transform 0.25s linear;
+      }
+
+      .buttonArrowDown {
+        transform: rotate(45deg);
+        transition: transform 0.25s linear;
+      }
+    }
+  }
+
+  .extra {
+    .body {
+
+    }
+
+    .date-created {
+
+    }
+
+    .date-deadline {
+
+    }
+
+    .time-at-work {
+
+    }
+
+
+    .btn {
+      padding: 3px 10px;
+      background-color: #9ba8ec;
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+}
+
+.comments {
+  .button {
+    margin-left: 20px;
+    padding: 3px 10px;
+    background-color: #9ba8ec;
+    cursor: pointer;
+    display: inline-block;
+  }
+}
